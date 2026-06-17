@@ -1,0 +1,170 @@
+/* Add your CSS here to style your father's day page */
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: auto;
+  overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2f241b;
+  background-color: #f7eddc;
+
+  /* Lots of dogs in the background */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Crect width='140' height='140' fill='%23f7eddc'/%3E%3Ccircle cx='70' cy='72' r='30' fill='%23d9a066'/%3E%3Cellipse cx='48' cy='46' rx='10' ry='18' fill='%238b5e34' transform='rotate(-25 48 46)'/%3E%3Cellipse cx='92' cy='46' rx='10' ry='18' fill='%238b5e34' transform='rotate(25 92 46)'/%3E%3Ccircle cx='60' cy='68' r='4' fill='%23231f20'/%3E%3Ccircle cx='80' cy='68' r='4' fill='%23231f20'/%3E%3Cellipse cx='70' cy='82' rx='8' ry='6' fill='%23231f20'/%3E%3Cpath d='M62 88 Q70 94 78 88' fill='none' stroke='%23231f20' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 140px 140px;
+}
+
+#wrapper {
+  width: max-content;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* Make things stretch out horizontally */
+header,
+main,
+footer {
+  width: max-content;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex-wrap: nowrap;
+}
+
+nav li {
+  background: rgba(255, 255, 255, 0.82);
+  border: 3px solid #7a4e2d;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Horizontal scrolling main area */
+main {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 320px);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+img,
+section,
+footer {
+  background: rgba(255, 255, 255, 0.84);
+  border: 3px solid #7a4e2d;
+  border-radius: 24px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+}
+
+/* Keep the hero image tidy */
+h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.05;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+}
+
+section {
+  min-height: 220px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  display: inline-block;
+  font-weight: 700;
+}
+
+/* Spin on touch */
+nav li,
+h1,
+img,
+section,
+footer {
+  transform-origin: center center;
+  transition: transform 1.45s ease;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+nav li:active,
+h1:active,
+img:active,
+section:active,
+footer:active {
+  transform: rotate(360deg) scale(1.03);
+}
+
+/* Nice keyboard accessibility too */
+nav li:focus-visible,
+h1:focus-visible,
+img:focus-visible,
+section:focus-visible,
+footer:focus-visible {
+  outline: 4px dashed #7a4e2d;
+  outline-offset: 6px;
+}
+
+
+
+
+
+/* Dark mode activated by hovering footer */
+body:has(footer:hover) {
+    background-color: #000;
+    color: #eee;
+
+    /* Darth Vader helmets */
+    background-image: url("../images/darth-vader.png");
+    background-repeat: repeat;
+    background-size: 120px;
+}
+
+body:has(footer:hover) h1,
+body:has(footer:hover) section,
+body:has(footer:hover) nav li,
+body:has(footer:hover) footer {
+    background: rgba(20, 20, 20, 0.9);
+    color: #eee;
+    border-color: #666;
+}
+
+body:has(footer:hover) img {
+    filter: brightness(.8) contrast(1.1);
+}

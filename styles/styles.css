@@ -1,0 +1,244 @@
+@font-face {
+    font-family: SephHay;
+    src: url("../fonts/Sephora\ &\ Hayden.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #C7CDD6;
+}
+
+#wrapper {
+  border: solid #2E5FB6 4px;
+  width: 967px;
+  margin: auto;
+  background: #55A14168;
+  display: grid;
+}
+
+nav {
+    height: 50px;
+    background-color: #55A14188;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #ffffff;
+    grid-column: 3 / 6;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+nav a:hover {
+    background: #55A14188;
+    border-radius: 40px;
+    text-shadow: 2px 2px #2E5FB667;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px 120px 120px 60px;
+  background-image: url("../images/musicHero.png");
+  background-size: cover;
+  background-position-y: -161px;
+  height: 400px;
+  border-bottom: 9px dotted #55A14198;
+}
+
+#callout {
+    font-family: "SephHay";
+    color: #fff;
+    /* border: 4px solid #2E5FB682; */
+    background-color: #55A14172;
+   
+    padding: 30px;
+    text-align: center;
+    border-radius: 60%;
+    font-size: 2em;
+    
+    text-shadow: 4px 2px #2E5FB6 ;
+
+    grid-column: 2 / 5;
+    grid-row: 2 / 4;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    
+    
+}
+
+section {
+  display: grid;
+  grid-template-columns: 50px 1fr 4fr 50px;
+  grid-template-rows: 50px 120px 120px 1fr 50px;
+}
+
+section img {
+    height: 240px;
+    border: 4px solid #2E5FB6;
+    border-radius: 20px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    z-index: 1;
+}
+
+.box {
+    border: 4px solid #55A141;
+    border-radius: 20px;
+    background: #fff;
+    min-height: 300px;
+    padding-left: 170px;
+    box-sizing: border-box;
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+}
+
+#contact {
+    color: #fff;
+    background-color: #55A14188;
+    min-height: 200px;
+    width: 200px;
+    padding: 10px;
+    border: 3px solid #2E5FB6;
+    position: fixed;
+    bottom: -325px;
+    right: 20px;
+    transition: bottom 3s ease-in-out;
+    z-index: 5;
+}
+
+#contact:hover {
+  bottom: 0;
+  transition: bottom 2s ease-in-out;
+}
+
+footer {
+  text-align: center;
+  height: 200px;
+  align-content: center;
+  background: linear-gradient(to bottom, #55A14100, #ffffff);
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  th {
+    background: linear-gradient(to right, #2e5fb667, #2e5fb6);
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Row colors */
+  tr:nth-child(even) {
+    background-color: #e6f2ff;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #cce0ff;
+  }
+
+  /* Hover effect */
+  tr:hover {
+    background-color: #2e5fb667;
+    transition: 0.3s;
+  }
+
+
+  @media (max-width: 1024px) {
+    #wrapper {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 745px) {
+    #wrapper, section {
+      display: block;
+      border: unset;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    header img {
+      display: none;
+    }
+    nav {
+      display: block;
+      height: unset;
+      border-radius: unset;
+    }
+    nav a {
+      height: 35px;
+    }
+    #callout {
+      display: block;
+      border-radius: unset;
+      border: unset;
+      box-shadow: unset;
+      order: -1;
+    }
+    #callout h1 {
+      font-size: 1em;
+    }
+
+    section img {
+      width: 100%;
+      height: unset;
+      border-radius: unset;
+      border: unset;
+    }
+    .box {
+      padding: 7%;
+      min-height: unset;
+      border: unset;
+      border-radius: unset;
+    }
+
+    #contact {
+      display: block;
+      position: unset;
+      width: 100%;
+      border: unset;
+      box-sizing: border-box;
+      background: #93160e;
+    }
+
+    #contact * {
+      width: 100%;
+      
+    }
+  }
+
+
+
+

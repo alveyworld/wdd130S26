@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Web page</title>
+
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <img width=200 src="images/logoBG.png" alt="musical alveyworld logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wwr/index.html">WWR</a>
+                <a href="ice/">ICE</a>
+                <a href="#">Projects</a>
+            </nav>
+            <div id="callout">
+                <h1>Brother Alvey's Portal Page</h1>
+            </div>
+        </header>
+        <main>
+            <section>
+                <img src="images/wwrMusic.png" alt="Classical composers rafting">
+                <div class="box">
+                    <h3>White Water Rafting</h3>
+                    <ul>
+                        <li>Tutorial site</li>
+                        <li>Planning</li>
+                        <li>Wireframe</li>
+                        <li>Structure with HTML</li>
+                        <li>Style with CSS</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <img src="images/iceMusic.png" alt="Classical composers hiking in snow and ice">
+                <div class="box">
+                    <h3>In Class Exercises (ICE)</h3>
+                    <ul>
+                        <li>Practice in Class</li>
+                        <li>45 minutes to complete tasks</li>
+                        <li>Challenges in HTML and CSS</li>
+                        <li>Focus on Grid practice</li>
+                        <li>Help and encourage classmates</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <img src="images/pioneersMusic.png" alt="projects picture">
+                <div class="box">
+                    <h3>Web Pioneers</h3>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Invention</th>
+                            <th>Fun Fa</th>
+                        </tr>
+                        <tr>
+                            <td>Tim Berners-Lee</td>
+                            <td>HTML, WWW, HTTP, URL</td>
+                            <td>Knighted by the Queen</td>
+                        </tr>
+                        <tr>
+                            <td>Vint Cerf and Bob Kahn</td>
+                            <td>TCP/IP, Internet</td>
+                            <td>Snappy dressers</td>
+                        </tr>
+                        <tr>
+                            <td>Marc Andreessen</td>
+                            <td>Browser</td>
+                            <td>Egg Shaped head</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer>
+            &copy; alveyworld
+            <div id="contact">
+                <h3>Contact Me</h3>
+                <form action="deal_with_my_form.php" method="get">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label>Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+
+                    <label for="comments">Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="20"></textarea><br><br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
